@@ -7,6 +7,9 @@
     <name>playwright-api-testing</name>
     <properties>
         <aspectj.version>1.9.21</aspectj.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -43,7 +46,6 @@
             <version>2.0.16</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
     <build>
         <plugins>
@@ -59,7 +61,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.5.1</version>
+                <version>3.5.2</version>
                 <configuration>
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
@@ -78,7 +80,7 @@
                 <artifactId>allure-maven</artifactId>
                 <version>2.14.0</version>
                 <configuration>
-                    <reportVersion>2.10.0</reportVersion>
+                    <reportVersion>2.32.0</reportVersion>
                 </configuration>
             </plugin>
         </plugins>

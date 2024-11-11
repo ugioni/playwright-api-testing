@@ -1,107 +1,55 @@
 package API;
 
 import API.Utils.Core;
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.microsoft.playwright.APIRequest;
-import com.microsoft.playwright.APIRequestContext;
 import com.microsoft.playwright.APIResponse;
 import com.microsoft.playwright.options.RequestOptions;
+import io.qameta.allure.Description;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
 import org.junit.jupiter.api.*;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static io.qameta.allure.SeverityLevel.CRITICAL;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class RunApiTests extends Core {
 
-
-    private APIRequestContext request;
-
-    private String token = " ";
-
-
-    void criarAPIRequestContext() {
-        Map<String, String> headers = new HashMap<>();
-        headers.put("Content-Type", "application/json");
-        request = playwright.request().newContext(new APIRequest.NewContextOptions()
-                .setBaseURL("https://serverest.dev")
-                .setIgnoreHTTPSErrors(true)
-                .setTimeout(30000)
-                .setExtraHTTPHeaders(headers));
-    }
-
+    private String token = null;
 
     @BeforeAll
     void iniciar() {
         iniciarTestes();
-        criarAPIRequestContext();
-        //createTestRepository();
-        reaizarLogin();
+        criarRequests("https://serverest.dev", 30000);
     }
 
-    String reaizarLogin() {
+    void reaizarLogin() {
         String dados = "{\"email\": \"henrique@gmail.com\", \"password\": \"123456789\"}";
-        System.out.println("----->>>> " + dados);
-        APIResponse login =
-                request.post("/login",
-                        RequestOptions.create().setData(dados));
-
-        System.out.println("----->>>> " + login.text());
-
-        assertTrue(login.ok(), login.text());
-        return login.text();
+        APIResponse resposta = request.post("/login", RequestOptions.create().setData(dados));
+        validarResposta(resposta, 200);
+        token = resposta.text().substring(70).replace("\"", "").replace("}", "").trim();
     }
 
     @BeforeEach
     void login() {
         reaizarLogin();
+        criarRequests("https://serverest.dev", 30000, token);
     }
-
 
     @Test
-    void shouldCreateBugReport() {
-        Map<String, String> data = new HashMap<>();
-        data.put("title", "[Bug] report 1");
-        data.put("body", "Bug description");
-
-        APIResponse newIssue = request.post("/repos/" + "/" + "/issues", RequestOptions.create().setData(data));
-        assertTrue(newIssue.ok());
-
-        APIResponse issues = request.get("/repos/" + "/" + "/issues");
-        assertTrue(issues.ok());
-        JsonArray json = new Gson().fromJson(issues.text(), JsonArray.class);
-        JsonObject issue = null;
-        for (JsonElement item : json) {
-            JsonObject itemObj = item.getAsJsonObject();
-            if (!itemObj.has("title")) {
-                continue;
-            }
-            if ("[Bug] report 1".equals(itemObj.get("title").getAsString())) {
-                issue = itemObj;
-                break;
-            }
-        }
-        assertNotNull(issue);
-        assertEquals("Bug description", issue.get("body").getAsString(), issue.toString());
-    }
-
-
-    void encerrarAPIRequestContext() {
-        if (request != null) {
-            request.dispose();
-            request = null;
-        }
+    @DisplayName("dsvdsvsdvsdsvdsv")
+    @Description(" desc testCadastroProduto")
+    @Severity(CRITICAL)
+    @Owner("John Doe")
+    void testCadastroProduto() {
+        String dados = "{\"nome\": \"dasdadasdaasdal\",\"preco\": 520,\"descricao\": \"Mouse Logitech ogitech 123\",\"quantidade\": 10}";
+        APIResponse resposta = request.post("/produtos", RequestOptions.create().setData(dados));
+        //System.out.println(resposta.status() + " ----->>>> " + resposta.text());
+        //System.out.println(resposta.statusText());
+        validarResposta(resposta, 201);
     }
 
     @AfterAll
     void finalizar() {
-        //  deleteTestRepository();
-        encerrarAPIRequestContext();
+        encerrarRequests();
         finalizarTestes();
     }
 }

@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d44895b4-c1c2-4e73-8294-e731e31be946" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/API/RunApiTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/API/Utils/Core.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/API/RunApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/API/RunApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/API/Utils/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/API/Utils/Core.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +41,8 @@
     "JUnit.RunApiTests.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.playwright-api-testing [allure,generate].executor": "Run",
+    "Maven.playwright-api-testing [allure:,serve...].executor": "Run",
+    "Maven.playwright-api-testing [allure:report].executor": "Run",
     "Maven.playwright-api-testing [allure:serve].executor": "Run",
     "Maven.playwright-api-testing [clean].executor": "Run",
     "Maven.playwright-api-testing [compile...].executor": "Run",
@@ -57,7 +54,8 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/github/playwright-api-testing/src/test/java"
+    "last_directory_selection": "C:/github/playwright-api-testing/src/test/java",
+    "last_opened_file_path": "C:/github/template-java-playwright-pageobject-main"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -69,10 +67,12 @@
     <option name="myCommands">
       <command value="mvn compile exec:java -D exec.mainClass=&quot;API.Main.java&quot;" />
       <command value="mvn compile exec:java -D exec.mainClass=&quot;Main.java&quot;" />
-      <command value="mvn allure generate" />
       <command value="allure generate" />
       <command value="allure serve allure-results" />
+      <command value="mvn allure generate" />
       <command value="mvn allure:serve" />
+      <command value="mvn allure: serve allure-results" />
+      <command value="mvn allure:report" />
     </option>
   </component>
   <component name="RunManager">
