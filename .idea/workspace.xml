@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d44895b4-c1c2-4e73-8294-e731e31be946" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/API/RunApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/API/RunApiTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/API/Utils/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/API/Utils/Core.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,29 +33,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.Main.executor": "Run",
-    "JUnit.RunApiTests.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "Maven.playwright-api-testing [allure,generate].executor": "Run",
-    "Maven.playwright-api-testing [allure:,serve...].executor": "Run",
-    "Maven.playwright-api-testing [allure:report].executor": "Run",
-    "Maven.playwright-api-testing [allure:serve].executor": "Run",
-    "Maven.playwright-api-testing [clean].executor": "Run",
-    "Maven.playwright-api-testing [compile...].executor": "Run",
-    "Maven.playwright-api-testing [install].executor": "Run",
-    "Maven.playwright-api-testing [test].executor": "Run",
-    "Maven.playwright-api-testing [verify].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/github/playwright-api-testing/src/test/java",
-    "last_opened_file_path": "C:/github/template-java-playwright-pageobject-main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RunApiTests.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.playwright-api-testing [allure,generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.playwright-api-testing [allure:,serve...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.playwright-api-testing [allure:report].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.playwright-api-testing [allure:serve].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.playwright-api-testing [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.playwright-api-testing [compile...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.playwright-api-testing [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.playwright-api-testing [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.playwright-api-testing [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/github/playwright-api-testing/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/github/template-java-playwright-pageobject-main&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />

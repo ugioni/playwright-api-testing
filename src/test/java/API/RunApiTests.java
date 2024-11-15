@@ -8,7 +8,7 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import org.junit.jupiter.api.*;
 
-import static io.qameta.allure.SeverityLevel.CRITICAL;
+import static io.qameta.allure.SeverityLevel.NORMAL;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class RunApiTests extends Core {
@@ -35,15 +35,13 @@ public class RunApiTests extends Core {
     }
 
     @Test
-    @DisplayName("dsvdsvsdvsdsvdsv")
-    @Description(" desc testCadastroProduto")
-    @Severity(CRITICAL)
-    @Owner("John Doe")
+    @DisplayName("POST - Cadastrar Produto")
+    @Description("POST - Cadastrar Produto")
+    @Severity(NORMAL)
+    @Owner("Ugioni")
     void testCadastroProduto() {
-        String dados = "{\"nome\": \"dasdadasdaasdal\",\"preco\": 520,\"descricao\": \"Mouse Logitech ogitech 123\",\"quantidade\": 10}";
+        String dados = "{\"nome\": \"pinheirinho de natal\",\"preco\": 520,\"descricao\": \"produto\",\"quantidade\": 10}";
         APIResponse resposta = request.post("/produtos", RequestOptions.create().setData(dados));
-        //System.out.println(resposta.status() + " ----->>>> " + resposta.text());
-        //System.out.println(resposta.statusText());
         validarResposta(resposta, 201);
     }
 
